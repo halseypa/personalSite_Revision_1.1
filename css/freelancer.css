@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: green;
   outline: none;
 }
 h1,
@@ -159,7 +159,7 @@ section h2 {
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: white;
   color: white;
 }
 @media (max-width: 767px) {
@@ -518,6 +518,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   background-image: none;
+  background-color: white;
 }
 .btn-success.disabled,
 .btn-success[disabled],
@@ -525,7 +526,8 @@ fieldset[disabled] .btn-success,
 .btn-success.disabled:hover,
 .btn-success[disabled]:hover,
 fieldset[disabled] .btn-success:hover,
-.btn-success.disabled:focus,
+.btn-
+.disabled:focus,
 .btn-success[disabled]:focus,
 fieldset[disabled] .btn-success:focus,
 .btn-success.disabled:active,
@@ -539,6 +541,7 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-success {
   border: 2px solid #858585;
+  background-color: white;
   color: #858585;
 }
 .btn-success .badge {
@@ -611,7 +614,7 @@ fieldset[disabled] .btn-success.active {
   opacity: 0.3;
 }
 .portfolio-modal .close-modal .lr {
-  height: 75px;
+  height: 35px;
   width: 1px;
   margin-left: 35px;
   background-color: #2C3E50;
@@ -623,7 +626,7 @@ fieldset[disabled] .btn-success.active {
   z-index: 1051;
 }
 .portfolio-modal .close-modal .lr .rl {
-  height: 75px;
+  height: 35px;
   width: 1px;
   background-color: #2C3E50;
   transform: rotate(90deg);
@@ -823,4 +826,59 @@ h2 span {
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.4);
    padding: 10px;
+}
+/*ugh, i have no idea why these color wouldn't work in the code before; I had to basically re-write over them
+with the below code. Very annoying*/
+.btn-success {
+  color: #505050;
+  background-color: transparent;
+  border-color: #d0d0d0;
+}
+.btn-success:focus,
+.btn-success.focus {
+  color: #505050;
+  background-color: transparent;
+  border-color: #d0d0d0;
+}
+.btn-success:hover {
+  color: #505050;
+  background-color: transparent;
+  border-color: #808080;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #808080;
+  border-color: #808080;
+}
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus {
+  color: #fff;
+  background-color: #808080;
+  border-color: #808080;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus {
+  background-color: #808080;
+  border-color: #808080;
 }
